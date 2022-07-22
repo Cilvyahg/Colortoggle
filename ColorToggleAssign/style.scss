@@ -1,0 +1,139 @@
+//Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+$border-color: #dadae3;
+$font-small: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #edeaea;
+}
+
+//HAMBURGER MENU + MAIN NAV TEXT
+
+.main-nav {
+  display: flex;
+  width: 100vw;
+  height: 5rem;
+  background-color: #a8afb1;
+
+  &__hamburger {
+    width: 5rem;
+    height: auto;
+    background-image: url(./hamburgerMenu.png);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+    // transform: translate(0%,15%);
+    // filter: invert(100%); // inside color to outside
+
+    &:hover {
+      opacity: 0.5;
+      background-color: #f5eaeb;
+    }
+  }
+
+  &__text {
+    margin: auto;
+    text-transform: uppercase;
+    font-family: 'Space Mono', monospace;
+    font-size: 1.8rem;
+    letter-spacing: 0.8em;
+    color: #fff;
+  }
+}
+
+// CURSOR POINTED ADDED ON HAMBURGERMENU AND COLOR LIST
+.main-nav__hamburger,
+.side-nav__list {
+  cursor: pointer;
+}
+
+// SIDE NAV VISIBILITY OFF
+
+.side-nav {
+  visibility: hidden;
+}
+
+//SIDENAV
+.side-nav__list {
+  border: 2px $border-color solid;
+  width: min(30%, 300px);
+
+  & .home {
+    background-color: #cdcdcd;
+  }
+
+  & .pink {
+    background-color: #e893d3;
+  }
+
+  & .yellow {
+    background-color: #ecef60;
+  }
+
+  & .green {
+    background-color: #6efd6e;
+  }
+
+  & .blue {
+    background-color: #90b1f3;
+  }
+
+  & .orange {
+    background-color: #f0aa42;
+  }
+
+  & .red {
+    background-color: #ff0000;
+  }
+
+  &--item {
+    text-transform: uppercase;
+    padding: 1.5rem 0 1.5rem 4rem;
+    border: solid 1px $border-color;
+    font-family: $font-small;
+    font-size: 1.4rem;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+}
+
+// mainpage text
+
+.colordisplay {
+  border: 1px solid $border-color;
+  width: 35%;
+  border-radius: 200px;
+  background-color: #fff;
+  height: 15rem;
+  margin: auto;
+  display: flex;
+  line-height: 1.5;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  & h2,
+  &__text {
+    text-transform: uppercase;
+    font-family: $font-small;
+  }
+  & h2 {
+    font-size: 4rem;
+  }
+
+  &__text {
+    font-size: 3rem;
+  }
+}

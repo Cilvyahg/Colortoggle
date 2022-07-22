@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #edeaea;
+}
+
+.main-nav {
+  display: flex;
+  width: 100vw;
+  height: 5rem;
+  background-color: #a8afb1;
+}
+.main-nav__hamburger {
+  width: 5rem;
+  height: auto;
+  background-image: url(./hamburgerMenu.png);
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+}
+.main-nav__hamburger:hover {
+  opacity: 0.5;
+  background-color: #f5eaeb;
+}
+.main-nav__text {
+  margin: auto;
+  text-transform: uppercase;
+  font-family: "Space Mono", monospace;
+  font-size: 1.8rem;
+  letter-spacing: 0.8em;
+  color: #fff;
+}
+
+.main-nav__hamburger,
+.side-nav__list {
+  cursor: pointer;
+}
+
+.side-nav {
+  visibility: hidden;
+}
+
+.side-nav__list {
+  border: 2px #dadae3 solid;
+  width: min(30%, 300px);
+}
+.side-nav__list .home {
+  background-color: #cdcdcd;
+}
+.side-nav__list .pink {
+  background-color: #e893d3;
+}
+.side-nav__list .yellow {
+  background-color: #ecef60;
+}
+.side-nav__list .green {
+  background-color: #6efd6e;
+}
+.side-nav__list .blue {
+  background-color: #90b1f3;
+}
+.side-nav__list .orange {
+  background-color: #f0aa42;
+}
+.side-nav__list .red {
+  background-color: #ff0000;
+}
+.side-nav__list--item {
+  text-transform: uppercase;
+  padding: 1.5rem 0 1.5rem 4rem;
+  border: solid 1px #dadae3;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.4rem;
+}
+.side-nav__list--item:hover {
+  font-weight: bold;
+}
+
+.colordisplay {
+  border: 1px solid #dadae3;
+  width: 35%;
+  border-radius: 200px;
+  background-color: #fff;
+  height: 15rem;
+  margin: auto;
+  display: flex;
+  line-height: 1.5;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.colordisplay h2, .colordisplay__text {
+  text-transform: uppercase;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.colordisplay h2 {
+  font-size: 4rem;
+}
+.colordisplay__text {
+  font-size: 3rem;
+}/*# sourceMappingURL=style.css.map */
