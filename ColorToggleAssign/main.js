@@ -32,4 +32,4 @@ colorToggler(blueToggle, '#90b1f3', 'blue');
 colorToggler(greenToggle, '#6efd6d', 'green');
 colorToggler(yellowToggle, '#ecef60', 'yellow');
 colorToggler(pinkToggle, '#e389d3', 'pink');
-colorPicker(homeToggle, '#cdcdcd', 'grey');
+colorToggler(homeToggle, '#cdcdcd', 'grey');
