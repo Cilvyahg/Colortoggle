@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 const enterHamburger = document.querySelector('.main-nav__hamburger');
 const sideNavToggle = document.querySelector('.side-nav__list');
@@ -49,8 +49,6 @@ colorToggler('#red', colorRed, 'red', '#f0594e');
 // ===============
 // KEYDOWN Event
 // ===============
-
-
 
 const KeyDownToggle = function (key, backgroundColor, innerText) {
   window.addEventListener('keydown', (event) => {
