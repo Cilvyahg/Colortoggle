@@ -1,52 +1,75 @@
 const enterHamburger = document.querySelector('.main-nav__hamburger');
 const sideNavToggle = document.querySelector('.side-nav__list');
 const colorDisplay = document.querySelector('.colordisplay');
-
-
-// ============
-// COLOR TOGGLES // uiteindelijk gezet in de functie zelf d.m.v variabele van te maken.
-// ============
-
-// const homeToggle = document.querySelector('.home');
-// const pinkToggle = document.querySelector('#pink');
-// const yellowToggle = document.querySelector('#yellow');
-// const greenToggle = document.querySelector('#green');
-// const blueToggle = document.querySelector('#blue');
-// const orangeToggle = document.querySelector('#orange');
-// const redToggle = document.querySelector('#red');
-
-
 const colorPicker = document.querySelector('.colordisplay__text');
 const navbar = document.querySelector('.navbar');
 
 enterHamburger.addEventListener('mouseenter', () => {
   sideNavToggle.style.marginLeft = '0px';
-  
 });
 
 navbar.addEventListener('mouseleave', () => {
   sideNavToggle.style.marginLeft = '-200px';
- 
 });
 
 
-const colorToggler = function (selector, backgroundColor, innertext, displayclr) {
 
-let colorItem = document.querySelector(selector)
+let colorHome = '#cdcdcd';
+let colorPink = '#e389d3';
+let colorYellow = '#ecef60';
+let colorGreen = '#6efd6d';
+let colorBlue = '#90b1f3';
+let colorOrange = '#f0a442';
+let colorRed = '#ff0000';
+
+
+const colorToggler = function (
+  selector,
+  backgroundColor,
+  innertext,
+  displayclr
+) {
+  let colorItem = document.querySelector(selector);
   colorItem.addEventListener('click', () => {
     document.body.style.backgroundColor = backgroundColor;
     colorDisplay.style.backgroundColor = displayclr;
     colorPicker.innerText = innertext;
     colorItem.checked = true;
     sideNavToggle.style.marginLeft = '-250px';
-   
   });
 };
 
-colorToggler('.home', '#cdcdcd', 'grey', '#8e9594');
-colorToggler('#pink', '#e389d3', 'pink', '#e48db5');
-colorToggler('#yellow', '#ecef60', 'yellow', '#d0ca13');
-colorToggler('#green', '#6efd6d', 'green', '#298020');
-colorToggler('#blue', '#90b1f3', 'blue', '#74cfd6');
-colorToggler('#orange', '#f0a442', 'orange', '#e08a54');
-colorToggler('#red', '#ff0000', 'red', '#f0594e');
+colorToggler('.home', colorHome, 'grey', '#8e9594');
+colorToggler('#pink', colorPink, 'pink', '#e48db5');
+colorToggler('#yellow', colorYellow, 'yellow', '#d0ca13');
+colorToggler('#green', colorGreen, 'green', '#298020');
+colorToggler('#blue', colorBlue, 'blue', '#74cfd6');
+colorToggler('#orange', colorOrange, 'orange', '#e08a54');
+colorToggler('#red', colorRed, 'red', '#f0594e');
+
+
+
+// KEYDOWN EVENT 1-7
+
+const KeyDownToggle = function (key, backgroundColor, innerText) {
+
+  window.addEventListener('keydown', (event) => {
+    if (event.key === key) {
+      event.preventDefault();
+      document.body.style.backgroundColor = backgroundColor;
+      colorDisplay.style.backgroundColor = '#fff';
+      colorPicker.innerText = innerText;
+
+      console.log(`The key ${key} was pressed down`);
+    }
+  });
+};
+
+
+KeyDownToggle('1', colorHome, '🪨');
+KeyDownToggle('2', colorPink, '💓');
+KeyDownToggle('3', colorYellow, '🌞');
+KeyDownToggle('4', colorGreen, '🍀');
+KeyDownToggle('5', colorBlue, '🦋');
+KeyDownToggle('6', colorOrange, '🍊');
+KeyDownToggle('7', colorRed, '🟥');

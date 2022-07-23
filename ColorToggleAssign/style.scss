@@ -1,8 +1,10 @@
 //Google fonts
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
-$border-color: #dadae3;
+$border-color: #e4e4ed;
 $font-small: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
 * {
   margin: 0;
   padding: 0;
@@ -23,7 +25,7 @@ body {
   display: flex;
   width: 100vw;
   height: 5rem;
-  background-color: #a8afb1;
+  background-color: #0f1940;
 
   &__hamburger {
     width: 5rem;
@@ -32,12 +34,11 @@ body {
     background-repeat: no-repeat;
     background-size: 60%;
     background-position: center;
-    // transform: translate(0%,15%);
-    // filter: invert(100%); // inside color to outside
-
+    filter: invert(100%); // inside color to outside
+   
     &:hover {
       opacity: 0.5;
-      background-color: #f5eaeb;
+      background-color: #c8c8c3;
     }
   }
 
@@ -46,36 +47,24 @@ body {
     text-transform: uppercase;
     font-family: 'Space Mono', monospace;
     font-size: 1.8rem;
-    letter-spacing: 0.8em;
+    letter-spacing: 0.8rem;
     color: #fff;
   }
 }
 
-// CURSOR POINTED ADDED ON HAMBURGERMENU AND COLOR LIST
 .main-nav__hamburger,
 .side-nav__list {
   cursor: pointer;
 }
 
-// SIDE NAV VISIBILITY OFF
-
-// .side-nav {
-//   // width: min(30%, 300px);
-
-//   // transform:translateX(200px);
-//   //  transition: transform 3s ease-in;
-//   //  border: 2px black solid;
-
-// }
+// wanneer men op de navbar hovert wil ik dat de .side-nav__list dit doet
 .navbar:hover .side-nav__list {
   transition: margin-left 1000ms;
 }
 
-//SIDENAV
+//SIDENAVBAR
 .side-nav__list {
-  // border: 2px $border-color solid;
-  // visibility: hidden;
-
+  border: 2px $border-color solid;
   margin-left: -200px;
   width: 200px;
   transition: margin-left 2ms ease-in-out;
@@ -121,7 +110,9 @@ body {
   }
 }
 
-// mainpage text
+// ==================
+// COLOR DISPLAY TEXT 
+// ==================
 
 .colordisplay {
   border: 1px solid $border-color;
@@ -151,3 +142,12 @@ body {
 }
 
 
+.key-down {
+  text-align: center;
+  margin-top: 5rem;
+  font-family: $font-small;
+  font-size: 2rem;
+}
+// =================
+// Media Queries 
+// =================

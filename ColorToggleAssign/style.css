@@ -17,7 +17,7 @@ body {
   display: flex;
   width: 100vw;
   height: 5rem;
-  background-color: #a8afb1;
+  background-color: #0f1940;
 }
 .main-nav__hamburger {
   width: 5rem;
@@ -26,17 +26,18 @@ body {
   background-repeat: no-repeat;
   background-size: 60%;
   background-position: center;
+  filter: invert(100%);
 }
 .main-nav__hamburger:hover {
   opacity: 0.5;
-  background-color: #f5eaeb;
+  background-color: #c8c8c3;
 }
 .main-nav__text {
   margin: auto;
   text-transform: uppercase;
   font-family: "Space Mono", monospace;
   font-size: 1.8rem;
-  letter-spacing: 0.8em;
+  letter-spacing: 0.8rem;
   color: #fff;
 }
 
@@ -50,6 +51,7 @@ body {
 }
 
 .side-nav__list {
+  border: 2px #e4e4ed solid;
   margin-left: -200px;
   width: 200px;
   transition: margin-left 2ms ease-in-out;
@@ -78,7 +80,7 @@ body {
 .side-nav__list--item {
   text-transform: uppercase;
   padding: 1.8rem 0 1.8rem 4rem;
-  border: solid 1px #dadae3;
+  border: solid 1px #e4e4ed;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 1.4rem;
 }
@@ -87,7 +89,7 @@ body {
 }
 
 .colordisplay {
-  border: 1px solid #dadae3;
+  border: 1px solid #e4e4ed;
   width: 35%;
   border-radius: 200px;
   background-color: #ffffff;
@@ -108,4 +110,11 @@ body {
 }
 .colordisplay__text {
   font-size: 3rem;
+}
+
+.key-down {
+  text-align: center;
+  margin-top: 5rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2rem;
 }/*# sourceMappingURL=style.css.map */
