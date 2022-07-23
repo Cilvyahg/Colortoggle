@@ -1,3 +1,5 @@
+"use strict";
+
 const enterHamburger = document.querySelector('.main-nav__hamburger');
 const sideNavToggle = document.querySelector('.side-nav__list');
 const colorDisplay = document.querySelector('.colordisplay');
@@ -12,8 +14,6 @@ navbar.addEventListener('mouseleave', () => {
   sideNavToggle.style.marginLeft = '-200px';
 });
 
-
-
 let colorHome = '#cdcdcd';
 let colorPink = '#e389d3';
 let colorYellow = '#ecef60';
@@ -21,7 +21,6 @@ let colorGreen = '#6efd6d';
 let colorBlue = '#90b1f3';
 let colorOrange = '#f0a442';
 let colorRed = '#ff0000';
-
 
 const colorToggler = function (
   selector,
@@ -47,12 +46,13 @@ colorToggler('#blue', colorBlue, 'blue', '#74cfd6');
 colorToggler('#orange', colorOrange, 'orange', '#e08a54');
 colorToggler('#red', colorRed, 'red', '#f0594e');
 
+// ===============
+// KEYDOWN Event
+// ===============
 
 
-// KEYDOWN EVENT 1-7
 
 const KeyDownToggle = function (key, backgroundColor, innerText) {
-
   window.addEventListener('keydown', (event) => {
     if (event.key === key) {
       event.preventDefault();
@@ -64,7 +64,6 @@ const KeyDownToggle = function (key, backgroundColor, innerText) {
     }
   });
 };
-
 
 KeyDownToggle('1', colorHome, '🪨');
 KeyDownToggle('2', colorPink, '💓');
