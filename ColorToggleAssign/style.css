@@ -45,13 +45,14 @@ body {
   cursor: pointer;
 }
 
-.side-nav {
-  visibility: hidden;
+.navbar:hover .side-nav__list {
+  transition: margin-left 1000ms;
 }
 
 .side-nav__list {
-  border: 2px #dadae3 solid;
-  width: min(30%, 300px);
+  margin-left: -200px;
+  width: 200px;
+  transition: margin-left 2ms ease-in-out;
 }
 .side-nav__list .home {
   background-color: #cdcdcd;
@@ -76,7 +77,7 @@ body {
 }
 .side-nav__list--item {
   text-transform: uppercase;
-  padding: 1.5rem 0 1.5rem 4rem;
+  padding: 1.8rem 0 1.8rem 4rem;
   border: solid 1px #dadae3;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 1.4rem;
@@ -89,7 +90,7 @@ body {
   border: 1px solid #dadae3;
   width: 35%;
   border-radius: 200px;
-  background-color: #fff;
+  background-color: #ffffff;
   height: 15rem;
   margin: auto;
   display: flex;

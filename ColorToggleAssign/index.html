@@ -9,41 +9,46 @@
   </head>
   <body>
     <!-- MAIN NAVBAR -->
-    <nav class="main-nav">
-      <div class="main-nav__hamburger"></div>
-      <!-- background image aan toevoegen -->
-      <div class="main-nav__text"><h2>Color Toggle</h2></div>
-    </nav>
 
-    <nav class="side-nav">
-      <ul class="side-nav__list" id="a">
-        <li class="home side-nav__list--item">Home</li>
-        <li class="pink side-nav__list--item">
-          <input id="pink" type="radio" name="radio" />
-          <label for="pinktoggle">Pink</label>
-        </li>
-        <li class="yellow side-nav__list--item">
-          <input id="yellow" type="radio" name="radio" />
-          <label for="yellowtoggle">Yellow</label>
-        </li>
-        <li class="green side-nav__list--item">
-          <input id="green" type="radio" name="radio" />
-          <label for="greentoggle">Green</label>
-        </li>
-        <li class="blue side-nav__list--item">
-          <input id="blue" type="radio" name="radio" />
-          <label for="bluetoggle">Blue</label>
-        </li>
-        <li class="orange side-nav__list--item">
-          <input id="orange" type="radio" name="radio" />
-          <label for="orangetoggle">Orange</label>
-        </li>
-        <li class="red side-nav__list--item">
-          <input id="red" type="radio" name="radio" />
-          <label for="redtoggle">Red</label>
-        </li>
-      </ul>
-    </nav>
+    <div class="navbar">
+      <nav class="main-nav">
+        <div class="main-nav__hamburger"></div>
+        <!-- background image aan toevoegen -->
+        <div class="main-nav__text"><h2>Color Toggle</h2></div>
+      </nav>
+
+      <nav class="side-nav">
+        <ul class="side-nav__list">
+          <li class="home side-nav__list--item">Home</li>
+
+          <li class="pink side-nav__list--item">
+            <input class="input-item" id="pink" type="radio" name="radio" />
+            <label class="input-item" for="pinktoggle">Pink</label>
+          </li>
+
+          <li class="yellow side-nav__list--item">
+            <input id="yellow" type="radio" name="radio" />
+            <label for="yellowtoggle">Yellow</label>
+          </li>
+          <li class="green side-nav__list--item">
+            <input id="green" type="radio" name="radio" />
+            <label for="greentoggle">Green</label>
+          </li>
+          <li class="blue side-nav__list--item">
+            <input id="blue" type="radio" name="radio" />
+            <label for="bluetoggle">Blue</label>
+          </li>
+          <li class="orange side-nav__list--item">
+            <input id="orange" type="radio" name="radio" />
+            <label for="orangetoggle">Orange</label>
+          </li>
+          <li class="red side-nav__list--item">
+            <input id="red" type="radio" name="radio" />
+            <label for="redtoggle">Red</label>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
     <main class="colordisplay">
       <h2>You picked the color:</h2>

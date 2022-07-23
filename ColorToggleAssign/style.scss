@@ -59,14 +59,26 @@ body {
 
 // SIDE NAV VISIBILITY OFF
 
-.side-nav {
-  visibility: hidden;
+// .side-nav {
+//   // width: min(30%, 300px);
+
+//   // transform:translateX(200px);
+//   //  transition: transform 3s ease-in;
+//   //  border: 2px black solid;
+
+// }
+.navbar:hover .side-nav__list {
+  transition: margin-left 1000ms;
 }
 
 //SIDENAV
 .side-nav__list {
-  border: 2px $border-color solid;
-  width: min(30%, 300px);
+  // border: 2px $border-color solid;
+  // visibility: hidden;
+
+  margin-left: -200px;
+  width: 200px;
+  transition: margin-left 2ms ease-in-out;
 
   & .home {
     background-color: #cdcdcd;
@@ -98,7 +110,7 @@ body {
 
   &--item {
     text-transform: uppercase;
-    padding: 1.5rem 0 1.5rem 4rem;
+    padding: 1.8rem 0 1.8rem 4rem;
     border: solid 1px $border-color;
     font-family: $font-small;
     font-size: 1.4rem;
@@ -115,7 +127,7 @@ body {
   border: 1px solid $border-color;
   width: 35%;
   border-radius: 200px;
-  background-color: #fff;
+  background-color: #ffffff;
   height: 15rem;
   margin: auto;
   display: flex;
@@ -137,3 +149,5 @@ body {
     font-size: 3rem;
   }
 }
+
+

@@ -1,53 +1,52 @@
-
-
 const enterHamburger = document.querySelector('.main-nav__hamburger');
 const sideNavToggle = document.querySelector('.side-nav__list');
-
-const homeToggle = document.querySelector('.home');
-
-const pinkToggle = document.querySelector('.pink');
-const pinkRadio = document.querySelector('#pink');
+const colorDisplay = document.querySelector('.colordisplay');
 
 
-const yellowToggle = document.querySelector('.yellow');
-const yellowRadio = document.querySelector('#yellow');
+// ============
+// COLOR TOGGLES // uiteindelijk gezet in de functie zelf d.m.v variabele van te maken.
+// ============
 
-
-const greenToggle = document.querySelector('.green');
-const greenRadio = document.querySelector('#green');
-
-
-const blueToggle = document.querySelector('.blue');
-const blueRadio = document.querySelector('#blue');
-
-const orangeToggle = document.querySelector('.orange');
-const orangeRadio = document.querySelector('#orange');
-
-const redToggle = document.querySelector('.red');
-const redRadio = document.querySelector('#red');
+// const homeToggle = document.querySelector('.home');
+// const pinkToggle = document.querySelector('#pink');
+// const yellowToggle = document.querySelector('#yellow');
+// const greenToggle = document.querySelector('#green');
+// const blueToggle = document.querySelector('#blue');
+// const orangeToggle = document.querySelector('#orange');
+// const redToggle = document.querySelector('#red');
 
 
 const colorPicker = document.querySelector('.colordisplay__text');
-
+const navbar = document.querySelector('.navbar');
 
 enterHamburger.addEventListener('mouseenter', () => {
-  sideNavToggle.style.visibility = 'visible';
+  sideNavToggle.style.marginLeft = '0px';
+  
+});
+
+navbar.addEventListener('mouseleave', () => {
+  sideNavToggle.style.marginLeft = '-200px';
+ 
 });
 
 
-const colorToggler = function (colorItem, bgc, innertext, radioBtn) {
+const colorToggler = function (selector, backgroundColor, innertext, displayclr) {
+
+let colorItem = document.querySelector(selector)
   colorItem.addEventListener('click', () => {
-    document.body.style.backgroundColor = bgc;
+    document.body.style.backgroundColor = backgroundColor;
+    colorDisplay.style.backgroundColor = displayclr;
     colorPicker.innerText = innertext;
-    radioBtn.checked = true;
-    sideNavToggle.style.visibility = 'hidden';
+    colorItem.checked = true;
+    sideNavToggle.style.marginLeft = '-250px';
+   
   });
 };
 
-colorToggler(homeToggle, '#cdcdcd', 'grey');
-colorToggler(pinkToggle, '#e389d3', 'pink', pinkRadio);
-colorToggler(yellowToggle, '#ecef60', 'yellow', yellowRadio);
-colorToggler(greenToggle, '#6efd6d', 'green', greenRadio);
-colorToggler(blueToggle, '#90b1f3', 'blue', blueRadio);
-colorToggler(orangeToggle, '#f0a442', 'orange', orangeRadio);
-colorToggler(redToggle, '#ff0000', 'red', redRadio);
+colorToggler('.home', '#cdcdcd', 'grey', '#8e9594');
+colorToggler('#pink', '#e389d3', 'pink', '#e48db5');
+colorToggler('#yellow', '#ecef60', 'yellow', '#d0ca13');
+colorToggler('#green', '#6efd6d', 'green', '#298020');
+colorToggler('#blue', '#90b1f3', 'blue', '#74cfd6');
+colorToggler('#orange', '#f0a442', 'orange', '#e08a54');
+colorToggler('#red', '#ff0000', 'red', '#f0594e');
