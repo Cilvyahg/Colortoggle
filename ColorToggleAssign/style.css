@@ -90,10 +90,10 @@ body {
 
 .colordisplay {
   border: 1px solid #e4e4ed;
-  width: 35%;
+  width: min(50%, 600px);
   border-radius: 200px;
   background-color: #ffffff;
-  height: 15rem;
+  min-height: 12rem;
   margin: auto;
   display: flex;
   line-height: 1.5;
@@ -106,15 +106,33 @@ body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .colordisplay h2 {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 .colordisplay__text {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .key-down {
   text-align: center;
-  margin-top: 5rem;
+  margin: 6rem 0;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 2rem;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 667px) {
+  main.colordisplay {
+    margin-top: 3rem;
+    width: 70%;
+  }
+  main.colordisplay h2, main.colordisplay text {
+    font-size: 2rem;
+  }
+  .key-down {
+    font-size: 1.8rem;
+    margin-top: 3rem;
+  }
+  .side-nav__list--item {
+    font-size: 1.2rem;
+    padding: 1rem 0 1rem 3rem;
+  }
 }/*# sourceMappingURL=style.css.map */

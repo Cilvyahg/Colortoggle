@@ -4,7 +4,6 @@
 $border-color: #e4e4ed;
 $font-small: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
-
 * {
   margin: 0;
   padding: 0;
@@ -35,7 +34,7 @@ body {
     background-size: 60%;
     background-position: center;
     filter: invert(100%); // inside color to outside
-   
+
     &:hover {
       opacity: 0.5;
       background-color: #c8c8c3;
@@ -111,15 +110,15 @@ body {
 }
 
 // ==================
-// COLOR DISPLAY TEXT 
+// COLOR DISPLAY TEXT
 // ==================
 
 .colordisplay {
   border: 1px solid $border-color;
-  width: 35%;
+  width: min(50%, 600px);
   border-radius: 200px;
   background-color: #ffffff;
-  height: 15rem;
+  min-height: 12rem;
   margin: auto;
   display: flex;
   line-height: 1.5;
@@ -133,21 +132,46 @@ body {
     font-family: $font-small;
   }
   & h2 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   &__text {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 
-
 .key-down {
   text-align: center;
-  margin-top: 5rem;
+  margin: 6rem 0;
   font-family: $font-small;
   font-size: 2rem;
 }
 // =================
-// Media Queries 
+// Media Queries
 // =================
+
+@media only screen and (min-width: 320px) and (max-width: 667px) {
+  main.colordisplay {
+    margin-top: 3rem;
+    width: 70%;
+    
+
+    & h2,
+    & text {
+      font-size: 2rem;
+    }
+  }
+
+  .key-down {
+    font-size: 1.8rem;
+    margin-top: 3rem;
+  }
+
+
+  .side-nav__list--item {
+    font-size: 1.2rem;
+    padding: 1rem 0 1rem 3rem;
+
+   
+  }
+}
