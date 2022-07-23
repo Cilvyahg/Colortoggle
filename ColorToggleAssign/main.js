@@ -14,13 +14,13 @@ navbar.addEventListener('mouseleave', () => {
   sideNavToggle.style.marginLeft = '-200px';
 });
 
-let colorHome = '#cdcdcd';
-let colorPink = '#e389d3';
-let colorYellow = '#ecef60';
-let colorGreen = '#6efd6d';
-let colorBlue = '#90b1f3';
-let colorOrange = '#f0a442';
-let colorRed = '#ff0000';
+const colorHome = '#cdcdcd';
+const colorPink = '#e389d3';
+const colorYellow = '#ecef60';
+const colorGreen = '#6efd6d';
+const colorBlue = '#90b1f3';
+const colorOrange = '#f0a442';
+const colorRed = '#ff0000';
 
 const colorToggler = function (
   selector,
@@ -28,7 +28,8 @@ const colorToggler = function (
   innertext,
   displayclr
 ) {
-  let colorItem = document.querySelector(selector);
+
+  const colorItem = document.querySelector(selector);
   colorItem.addEventListener('click', () => {
     document.body.style.backgroundColor = backgroundColor;
     colorDisplay.style.backgroundColor = displayclr;
