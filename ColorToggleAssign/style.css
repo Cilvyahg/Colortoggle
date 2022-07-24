@@ -88,6 +88,14 @@ body {
   font-weight: bold;
 }
 
+.open-margin-left {
+  margin-left: 0px;
+}
+
+.close-margin-left {
+  margin-left: -200px;
+}
+
 .colordisplay {
   border: 1px solid #e4e4ed;
   width: min(50%, 600px);
