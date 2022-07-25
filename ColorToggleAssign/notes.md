@@ -45,3 +45,19 @@ hieronder zijn ze apart.
 //    colorPicker.innerText = 'red';
 //    redToggle.checked = true;
 // })
+
+
+enterHamburger.addEventListener('mouseenter', () => {
+  // sideNavToggle.style.marginLeft = '0px';
+  sideNavToggle.classList.add('open-margin-left');
+  sideNavToggle.classList.remove('close-margin-left');
+});
+
+
+
+navbar.addEventListener('mouseleave', () => {
+  // sideNavToggle.style.marginLeft = '-200px';
+  sideNavToggle.classList.remove('open-margin-left')
+  sideNavToggle.classList.add('close-margin-left')
+
+});

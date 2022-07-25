@@ -42,7 +42,10 @@ const colorToggler = function (
     colorDisplay.style.backgroundColor = displayclr;
     colorPicker.innerText = innertext;
     colorItem.checked = true;
-    sideNavToggle.style.marginLeft = '-250px';
+    sideNavToggle.classList.add('close-margin-left');
+    // sideNavToggle.style.marginLeft = '-250px';
+
+
   });
 };
 
@@ -65,7 +68,6 @@ const KeyDownToggle = function (key, backgroundColor, innerText) {
       document.body.style.backgroundColor = backgroundColor;
       colorDisplay.style.backgroundColor = '#fff';
       colorPicker.innerText = innerText;
-
       console.log(`The key ${key} was pressed down`);
     }
   });
@@ -78,3 +80,4 @@ KeyDownToggle('4', colorGreen, '🍀');
 KeyDownToggle('5', colorBlue, '🦋');
 KeyDownToggle('6', colorOrange, '🍊');
 KeyDownToggle('7', colorRed, '🟥');
+
