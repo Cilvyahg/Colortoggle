@@ -40,3 +40,7 @@ let toggleNav = function () {
     toggleNavStatus = false;
   }
 }
+
+toggleNav()
+
+console.log('hello')

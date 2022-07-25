@@ -8,8 +8,8 @@ const navbar = document.querySelector('.navbar');
 
 enterHamburger.addEventListener('mouseenter', () => {
   // sideNavToggle.style.marginLeft = '0px';
-  sideNavToggle.classList.add('open-margin-left');
   sideNavToggle.classList.remove('close-margin-left');
+  sideNavToggle.classList.add('open-margin-left');
 });
 
 
